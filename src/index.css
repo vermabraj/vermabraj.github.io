@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;900;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.btn-primary {
+  @apply bg-blue-400  font-semibold  md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-blue-400 -z-10;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-blue-400
+}
+
+input,
+textarea {
+  @apply bg-blue-400 outline-none rounded-lg p-3;
+}
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-orange-600;
+}
+
+::-webkit-scrollbar{
+  width: 1rem;
+  background-color: var(--bg-clr);
+}
+
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(transparent,rgb(66, 165, 245));
+  border-radius: 1rem;
+  
 }
