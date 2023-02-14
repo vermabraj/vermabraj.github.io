@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 .btn-primary {
-  @apply bg-blue-400  font-semibold  md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+  @apply bg-pink-400  font-semibold  md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
 }
 
 .aboutImg::after {
@@ -26,7 +28,7 @@ textarea {
 }
 
 ::selection {
-  @apply bg-orange-600;
+  @apply bg-blue-400;
 }
 
 ::-webkit-scrollbar{

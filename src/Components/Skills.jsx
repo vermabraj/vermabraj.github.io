@@ -89,11 +89,14 @@ const Skills = () => {
   ];
   return (
     <section id="skills" className="py-10  relative">
-      <div className="mt-8  text-center">
-        <h3 className="text-4xl font-semibold">
-          My <span className="text-blue-400">Skills</span>
-        </h3>
-        <p className=" mt-3 text-lg">My knowledge</p>
+      <div className="mt-8  text-center ">
+      <div className="text-center">
+      <h3 className="text-4xl font-semibold">
+        My <span className="text-blue-400">skills</span>
+      </h3>
+      <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+    </div>
+        
         <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
           {skills?.map((skill, i) => (
             <div

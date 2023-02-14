@@ -13,13 +13,16 @@ import {
   createIcon,
   IconProps,
   useColorModeValue,
+  HStack
 } from '@chakra-ui/react';
-
+import { FaInstagramSquare } from 'react-icons/fa';
+import { BsGithub, BsDiscord, BsPerson, BsYoutube, BsLinkedin } from "react-icons/bs";
 
 import { FaFistRaised } from 'react-icons/fa';
 export default function Hero() {
   return (
-    <Container   maxW={'7xl'} minH={"2xl"} className="headerContainer"
+    <section id="home">
+    <Container   maxW={'90%'} minH={"xl"} justifyContent={"space-between"} className="headerContainer"
    
     >
       <Stack
@@ -76,16 +79,61 @@ export default function Hero() {
        
       />
         </Text>
+       
           </Flex>
         
-          
+          <HStack
+          mt={{ lg: 10, md: 10 }}
+          spacing={1}
+          color={"gray.500"}
+         
+          alignItems="flex-start"
+        >
+        <a href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/">
+        <IconButton
+            aria-label="facebook"
+            variant="ghost"
+            size="lg"
+            isRound={true}
+            _hover={{ bg: "blue.400" }}
+            icon={<FaInstagramSquare size="25px" />}
+          />
+          </a>
+          <a href="https://www.youtube.com/@Brajverma">
+            <IconButton
+            aria-label="youtube"
+            variant="ghost"
+            size="lg"
+            isRound={true}
+            _hover={{ bg: "blue.400" }}
+            icon={<BsYoutube size="25px" />}
+          /></a>
+          <a href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/">
+          <IconButton
+          aria-label="linkedin"
+          variant="ghost"
+          size="lg"
+          isRound={true}
+          _hover={{ bg: "blue.400" }}
+          icon={<BsLinkedin size="23px" />}
+        /></a>
+        <a href="https://github.com/vermabraj">
+          <IconButton
+          aria-label="github"
+          variant="ghost"
+          size="lg"
+          isRound={true}
+          _hover={{ bg: "blue.400" }}
+          icon={<BsGithub size="25px" />}
+        /></a>
+        </HStack>
         </Stack>
         <Flex
           flex={1}
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'90%'}
+          w={'100%'}
           top={{base:"5rem", md:"1rem"}}
           >
           <Blob
@@ -124,6 +172,7 @@ export default function Hero() {
         </Flex>
       </Stack>
     </Container>
+    </section>
   );
 }
 
