@@ -44,30 +44,37 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.300', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      bg={useColorModeValue("gray.300", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
+    >
       <Container
         as={Stack}
-        maxW={'6xl'}
+        maxW={"6xl"}
         py={4}
-        direction={{ base: 'column', md: 'row' }}
+        direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
+        justify={{ base: "center", md: "space-between" }}
+        align={{ base: "center", md: "center" }}
+      >
         <Text>© 2023 Brajmohan verma. All rights reserved</Text>
-        <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-          <a href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/">
-            <FaLinkedin />
+        <Stack direction={"row"} spacing={6}>
+          <SocialButton label={"Twitter"} href={"#"}>
+            <a
+              href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
+              target="_blank"
+            >
+              <FaLinkedin />
             </a>
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-          <a href="https://www.youtube.com/@Brajverma">
-            <FaYoutube />
+          <SocialButton label={"YouTube"} href={"#"}>
+            <a href="https://www.youtube.com/@Brajverma" target="_blank">
+              <FaYoutube />
             </a>
           </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
+          <SocialButton label={"Instagram"} href={"#"}>
+            <a href="https://instagram.com/_verma_braj" target="_blank">
+              <FaInstagram />
+            </a>
           </SocialButton>
         </Stack>
       </Container>

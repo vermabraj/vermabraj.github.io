@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   useColorMode,
 } from '@chakra-ui/react';
-import Resume from "../assets/Brajmohan_Verma_Resume.pdf"
+import Resume from "../assets/fw20_0997_Brajmohan_Verma_Resume.pdf";
 
 import React, { useEffect, useState } from "react";
 import { AiOutlineMenuFold } from "react-icons/ai";
@@ -74,7 +74,7 @@ const Navbar = () => {
                 href={Resume}
                 target="_blank"
                 rel="noreferrer"
-                download="Brajmohan_Verma_Resume.pdf"
+                download="fw20_0997_Brajmohan_Verma_Resume.pdf"
                 onClick={() =>
                   window.open(
                     "https://drive.google.com/file/d/1iRX3957aRE2asiMleyLksndLZOFJUkM0/view?usp=sharing"

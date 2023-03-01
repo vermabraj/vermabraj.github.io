@@ -1,79 +1,50 @@
 import React from "react";
-import { AiOutlineHtml5 } from "react-icons/ai";
- import { IoLogoCss3,IoLogoJavascript,IoLogoNodejs } from 'react-icons/io';
- import { FaReact } from 'react-icons/fa';
- import { SiRedux,SiTypescript,SiChakraui,SiMongodb,SiTailwindcss } from 'react-icons/si';
- import { TbBrandNextjs } from 'react-icons/tb';
+import { AiFillGithub } from "react-icons/ai";
+ import { SiVisualstudio,SiNetlify, SiPostman } from 'react-icons/si';
+ import { TbBrandVercel } from 'react-icons/tb'; 
+import { BsSlack } from 'react-icons/bs'; 
+import { DiGit } from "react-icons/di";
 
 
 const Skills = () => {
   const skills = [
     {
-      logo: <AiOutlineHtml5/>,
-      name:"HTML"
-    
+      logo: <BsSlack />,
+      name: "Netlify",
     },
     {
-      logo: <IoLogoCss3/>,
-      name:"CSS"
-     
+      logo: <SiVisualstudio />,
+      name: "VS Code",
     },
     {
-      logo: <IoLogoJavascript/>,
-      name:"JavaScript"
-     
+      logo: <AiFillGithub />,
+      name: "Github",
     },
     {
-      logo: <FaReact/>,
-      name:"React"
-     
+      logo: <DiGit />,
+      name: "Github",
     },
     {
-      logo: <SiRedux/>,
-      name:"Redux"
-     
+      logo: <SiPostman />,
+      name: "Postman",
     },
     {
-      logo: <SiTypescript/>,
-      name:"Typescript"
-     
+      logo: <TbBrandVercel />,
+      name: "Vercel",
     },
     {
-      logo: <TbBrandNextjs/>,
-      name:"Next.js"
-     
+      logo: <SiNetlify />,
+      name: "Netlify",
     },
-    {
-      logo: <IoLogoNodejs/>,
-      name:"Nodejs"
-     
-    },
-    {
-      logo: <SiMongodb/>,
-      name:"MongoDB"
-     
-    },
-    {
-      logo: <SiChakraui/>,
-      name:"Chakra-UI"
-     
-    },
-    {
-      logo: <SiTailwindcss/>,
-      name:"Tailwind CSS"
-     
-    }
-   
-    
   ];
   return (
-    <section id="skills" className="py-10  relative">
+    <section id="tools" className="py-10  relative">
       <div className="mt-8  text-center ">
       <div className="text-center">
       <h3 className="text-4xl font-semibold">
-        My <span className="text-blue-400">skills</span>
+        My <span className="text-blue-400">Tools</span>
       </h3>
-      <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+      <p className="text-gray-400 mt-3 text-lg">working on...</p>
     </div>
         
         <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
@@ -86,6 +57,7 @@ const Skills = () => {
              
                 className=" flex items-center justify-center rounded-full"
               >
+
                 <div className="text-6xl w-28 h-28   rounded-full flex items-center justify-center group-hover:text-blue-400">
                  {skill.logo}
                 </div>

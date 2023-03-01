@@ -24,6 +24,7 @@ const GithubTasks = () => {
       
       <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vermabraj&" alt="vermabraj" /></p>
       </div>
+      
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ import Hero from './Components/Hero'
 import Skills from './Components/Skills'
 import Footer from './Components/Footer'
 import GithubTasks from './Components/GithubTasks'
-
+import Tools from "./Components/Tools"
 import GridBlurredBackdrop from './Components/Projects'
 
 
@@ -22,6 +22,7 @@ const App = () => {
       <AboutMe />
 
       <Skills />
+      <Tools/>
       <GridBlurredBackdrop />
       <GithubTasks />
       <Contact />

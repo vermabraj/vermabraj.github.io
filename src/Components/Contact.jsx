@@ -69,7 +69,7 @@ export default function Contact() {
           <p className="text-gray-400 mt-3 text-lg">Know about me?</p>
         </div>
 
-        <Flex >
+        <Flex>
           <Box
             bg="blue.400"
             textColor={"black"}
@@ -92,16 +92,16 @@ export default function Contact() {
                       Fill up the form below to contact
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} spacing={3} alignItems="flex-start">
+                      <VStack  spacing={3} alignItems="flex-start">
                         <Button
-                          size="lg"
+                          size="md"
                           height="48px"
                           width="220px"
                           variant="ghost"
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdPhone color="black" size="20px" />}
                         >
-                          +91 9888888888888
+                          +91 8458825546
                         </Button>
                         <Button
                           size="md"
@@ -117,6 +117,7 @@ export default function Contact() {
                           size="md"
                           height="48px"
                           width="220px"
+                          
                           variant="ghost"
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdLocationOn color="black" size="20px" />}
@@ -133,7 +134,10 @@ export default function Contact() {
                     >
                       <div className="animate-bounce">
                         {" "}
-                        <a href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/">
+                        <a
+                          href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
+                          target="_blank"
+                        >
                           <IconButton
                             aria-label="facebook"
                             variant="ghost"
@@ -145,7 +149,7 @@ export default function Contact() {
                         </a>
                       </div>
                       <div className="animate-bounce">
-                        <a href="https://github.com/vermabraj">
+                        <a href="https://github.com/vermabraj" target="_blank">
                           <IconButton
                             aria-label="github"
                             variant="ghost"
@@ -157,11 +161,15 @@ export default function Contact() {
                         </a>
                       </div>
                       <div className="animate-bounce">
-                        <a href="https://www.youtube.com/@Brajverma">
+                        <a
+                          href="https://www.youtube.com/@Brajverma"
+                          target="_blank"
+                        >
                           <IconButton
                             aria-label="discord"
                             variant="ghost"
                             size="lg"
+                            
                             isRound={true}
                             _hover={{ bg: "#0D74FF" }}
                             icon={<BsYoutube size="28px" />}

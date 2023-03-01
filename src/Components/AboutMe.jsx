@@ -8,7 +8,7 @@ import {
   Image,
   
 } from '@chakra-ui/react';
-import Resume from "../assets/Brajmohan_Verma_Resume.pdf";
+import Resume from "../assets/fw20_0997_Brajmohan_Verma_Resume.pdf";
 import heroImage from "../assets/heroImage.png"
 
 
@@ -68,7 +68,7 @@ export default function AboutMe() {
                     href={Resume}
                     target="_blank"
                     rel="noreferrer"
-                    download="Brajmohan_Verma_Resume.pdf"
+                    download="fw20_0997_Brajmohan_Verma_Resume.pdf"
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/file/d/1iRX3957aRE2asiMleyLksndLZOFJUkM0/view?usp=sharing"
@@ -82,7 +82,7 @@ export default function AboutMe() {
             </Stack>
           </Stack>
           <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-            <div className="lg:w-96 p-8  relative sm:w-10/12 w-11/12 max-w-sm  flex space-x-4 ">
+            <div className="lg:w-96 p-12  relative sm:w-10/12 w-11/12 max-w-sm  flex space-x-4 ">
               <Image
                 alt={"Braj Image"}
                 fit={"cover"}

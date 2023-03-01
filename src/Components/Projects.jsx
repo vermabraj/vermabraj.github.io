@@ -50,6 +50,15 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
         <SiFirebase size={"30px"} />,
         <SiChakraui size={"30px"} />,
       ],
+      techStacknames: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React",
+        "Redux",
+        "Firebase",
+        "Chakra-ui",
+      ],
     },
     {
       img: Reliance_digital,
@@ -65,6 +74,14 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
         <SiRedux size={"30px"} />,
         <SiChakraui size={"30px"} />,
       ],
+      techStacknames: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React",
+        "Redux",
+        "Chakra-ui",
+      ],
     },
     {
       img: Deccan_chronicle,
@@ -77,6 +94,7 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
         <IoLogoCss3 size={"30px"} />,
         <IoLogoJavascript size={"30px"} />,
       ],
+      techStacknames: ["HTML", "CSS", "Javascript"],
     },
     {
       img: chrono_meter,
@@ -89,6 +107,7 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
         <IoLogoCss3 size={"30px"} />,
         <IoLogoJavascript size={"30px"} />,
       ],
+      techStacknames: ["HTML", "CSS", "Javascript"],
     },
   ];
 
@@ -107,11 +126,12 @@ interface ProjectsCardProps {
   live_link: string;
   disc:String;
   techStack:String;
+  techStacknames:String;
   index: number;
 }
 
 function ProjectsCard(props: ProjectsCardProps) {
-  const { name, img , github_link , live_link , disc, techStack, index } = props;
+  const { name, img , github_link , live_link , disc, techStack,techStacknames, index } = props;
   return (
     <Flex
       boxShadow={"lg"}
@@ -158,14 +178,13 @@ function ProjectsCard(props: ProjectsCardProps) {
           border="3px solid black"
         />
         <h3 className="text-2xl my-2  text-center">{name}</h3>
-        <p className="   p-2 text-left">{disc}</p>
-        <h3 className="   p-2 text-left flex items-center">
-          <b className="  ">Tech-Stack:- </b>{" "}
-          <div className="flex ml-2 border w-auto items-center">
-            {" "}
-            {techStack.map((el) => el)}
-          </div>
-        </h3>
+        <p className=" text-left">{disc}</p>
+        <Flex>
+          <Box className="w-20%  mr-2 font-bold" >Tech Stack:- </Box>
+          
+          <Flex>{techStacknames.map((el)=><p className="ml-1 text-sm font-semibold">{el}, </p>)}</Flex>
+        </Flex>
+
         <div className="flex gap-10 justify-center mb-5 mt-3">
           <Flex direction="row" className=" gap-10 justify-between">
             <Button
