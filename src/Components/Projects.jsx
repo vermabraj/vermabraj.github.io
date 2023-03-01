@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   chakra,
-  Container,
+  Text,
   Flex,
   Icon,
   SimpleGrid,
@@ -16,16 +16,11 @@ import chrono_meter from "../assets/chrono_meter.png";
 import Quicksell from "../assets/Quicksell.png";
 import Reliance_digital from "../assets/Reliance_digital.png";
 import { AiOutlineHtml5 } from "react-icons/ai";
-import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+
 import {
   SiRedux,
-  SiTypescript,
-  SiVisualstudio,
-  SiNetlify,
   SiChakraui,
-  SiMongodb,
-  SiTailwindcss,
   SiReact,
   SiFirebase,
 } from "react-icons/si";
@@ -179,10 +174,10 @@ function ProjectsCard(props: ProjectsCardProps) {
         />
         <h3 className="text-2xl my-2  text-center">{name}</h3>
         <p className=" text-left">{disc}</p>
-        <Flex>
-          <Box className="w-20%  mr-2 font-bold" >Tech Stack:- </Box>
+        <Flex className="mt-2">
+          <Box className=" mr-2 font-bold " >Tech Stack:</Box>
           
-          <Flex>{techStacknames.map((el)=><p className="ml-1 text-sm font-semibold">{el}, </p>)}</Flex>
+          <Flex>{techStacknames.map((el)=><Text className="ml-1 text-sm font-semibold ">{el}, </Text>)}</Flex>
         </Flex>
 
         <div className="flex gap-10 justify-center mb-5 mt-3">
