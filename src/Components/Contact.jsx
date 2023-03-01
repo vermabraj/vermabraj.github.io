@@ -80,7 +80,7 @@ export default function Contact() {
             <Box p={4}>
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                 <WrapItem>
-                  <Box>
+                  <Box >
                     <Heading>
                       Contact <span>me</span>
                     </Heading>
@@ -92,21 +92,24 @@ export default function Contact() {
                       Fill up the form below to contact
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack  spacing={3} alignItems="flex-start">
+                      <VStack spacing={3} alignItems="flex-start">
+                        
+                          <Button
+                            size="md"
+                            height="48px"
+                            
+                            variant="ghost"
+                            _hover={{ border: "2px solid #1C6FEB" }}
+                            leftIcon={<MdPhone color="black" size="20px" />}
+                          >
+                            +91 8458825546
+                          </Button>
+                       
+
                         <Button
                           size="md"
                           height="48px"
-                          width="220px"
-                          variant="ghost"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdPhone color="black" size="20px" />}
-                        >
-                          +91 8458825546
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="220px"
+                          
                           variant="ghost"
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdEmail color="black" size="20px" />}
@@ -116,7 +119,6 @@ export default function Contact() {
                         <Button
                           size="md"
                           height="48px"
-                          width="220px"
                           
                           variant="ghost"
                           _hover={{ border: "2px solid #1C6FEB" }}
@@ -169,7 +171,6 @@ export default function Contact() {
                             aria-label="discord"
                             variant="ghost"
                             size="lg"
-                            
                             isRound={true}
                             _hover={{ bg: "#0D74FF" }}
                             icon={<BsYoutube size="28px" />}

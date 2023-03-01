@@ -175,9 +175,13 @@ function ProjectsCard(props: ProjectsCardProps) {
         <h3 className="text-2xl my-2  text-center">{name}</h3>
         <p className=" text-left">{disc}</p>
         <Flex className="mt-2">
-          <Box className=" mr-2 font-bold " >Tech Stack:</Box>
-          
-          <Flex>{techStacknames.map((el)=><Text className="ml-1 text-sm font-semibold ">{el}, </Text>)}</Flex>
+          <Box className=" mr-2 font-bold ">Tech Stack:</Box>
+
+          <Flex>
+            {techStacknames.map((el) => (
+              <Text className="ml-1 text-sm font-semibold ">{el}, </Text>
+            ))}
+          </Flex>
         </Flex>
 
         <div className="flex gap-10 justify-center mb-5 mt-3">
@@ -188,18 +192,20 @@ function ProjectsCard(props: ProjectsCardProps) {
               variant="solid"
               bg={"#42A5F5"}
               _hover={{ bg: "#E2E8F0" }}
+              minWidth={"140px"}
             >
               Live Demo
             </Button>
 
             <Button
               onClick={() => window.open(github_link)}
-              leftIcon={<AiFillGithub width={"40px"} />}
+              leftIcon={<AiFillGithub size={"22px"} />}
               variant="solid"
               bg={"#42A5F5"}
               _hover={{ bg: "#E2E8F0" }}
+              minWidth={"140px"}
             >
-              Github
+              Visit Github
             </Button>
           </Flex>
         </div>
