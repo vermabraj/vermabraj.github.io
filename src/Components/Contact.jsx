@@ -49,8 +49,11 @@ export default function Contact() {
          },
          (error) => {
            console.log(error.text);
+
          }
+
        );
+       form.current.reset();
    };
 
   return (
@@ -188,7 +191,7 @@ export default function Contact() {
                           ref={form}
                           onSubmit={sendEmail}
                           id="name"
-                          method="POST"
+                          
                         >
                           <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
@@ -199,7 +202,7 @@ export default function Contact() {
                             <Input
                               type="text"
                               size="md"
-                              name="user_name"
+                              name="name"
                               autoComplete="off"
                               required
                             />
@@ -215,7 +218,7 @@ export default function Contact() {
                             <Input
                               type="email"
                               size="md"
-                              name="user_email"
+                              name="email"
                               autoComplete="off"
                               required
                             />
