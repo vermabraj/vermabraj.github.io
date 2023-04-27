@@ -80,16 +80,16 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
     },
     {
       img: Deccan_chronicle,
-      name: "Deccan Chronicle",
-      github_link: "https://github.com/vermabraj/Deccan-chronicle",
-      live_link: "https://bucolic-begonia-e0b49a.netlify.app/",
-      disc: `An english news website, where you can find news related our nation as well as the world, you also can find the news related to lifestyle, sports, technology, entertainment, and also about job and education.`,
+      name: "My Diary",
+      github_link: "https://github.com/vermabraj/my-diary",
+      live_link: "https://my-diary-vermabraj.vercel.app/",
+      disc: `An personal diary, where you can write your own thought on a daily basis and save it as a memory with your photo and also can add your photo to the gallery, anyone can use it. It's full stack app`,
       techStack: [
         <AiOutlineHtml5 size={"30px"} />,
         <IoLogoCss3 size={"30px"} />,
         <IoLogoJavascript size={"30px"} />,
       ],
-      techStacknames: ["HTML", "CSS", "Javascript"],
+      techStacknames: ["HTML", "CSS", "Javascript","React","Redux","Chakra-UI","Node.js","Express.js","MongoDB"]
     },
     {
       img: chrono_meter,
@@ -175,11 +175,11 @@ function ProjectsCard(props: ProjectsCardProps) {
         <h3 className="text-2xl my-2  text-center">{name}</h3>
         <p className=" text-left">{disc}</p>
         <Flex className="mt-2">
-          <Box className=" mr-2 font-bold ">Tech Stack:</Box>
+          <span className="  font-bold text-sm p-2 " >Tech Stack:</span>
 
-          <Flex>
+          <Flex flexWrap={"wrap"}>
             {techStacknames.map((el) => (
-              <Text className="ml-1 text-sm font-semibold ">{el}, </Text>
+              <span className="ml-1 text-sm font-semibold ">{el}, </span>
             ))}
           </Flex>
         </Flex>

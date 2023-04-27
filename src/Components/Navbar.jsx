@@ -84,7 +84,11 @@ const Navbar = () => {
                 RESUME
               </a>
             </li>
-            <Button background={"none"} onClick={toggleColorMode}>
+            <Button
+              variant="none"
+              background={"none"}
+              onClick={toggleColorMode}
+            >
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </ul>
@@ -114,7 +118,11 @@ const Navbar = () => {
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
-            <Button background={"none"} onClick={toggleColorMode}>
+            <Button
+              variant="none"
+              background={"none"}
+              onClick={toggleColorMode}
+            >
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </ul>
