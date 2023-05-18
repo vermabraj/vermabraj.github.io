@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb4a7541.css",
-    "main.js": "/static/js/main.d2b75864.js",
+    "main.css": "/static/css/main.a2963319.css",
+    "main.js": "/static/js/main.53f51561.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Deccan_chronicle.png": "/static/media/Deccan_chronicle.f66a56b7554bbf2c69f7.png",
     "static/media/Quicksell.png": "/static/media/Quicksell.e9595de9a35d5311e7a9.png",
@@ -10,12 +10,12 @@
     "static/media/fw20_0997_Brajmohan_Verma_Resume.pdf": "/static/media/fw20_0997_Brajmohan_Verma_Resume.b2d04af6937ad67e2878.pdf",
     "static/media/chrono_meter.png": "/static/media/chrono_meter.e709e62a979f5c046dcc.png",
     "index.html": "/index.html",
-    "main.bb4a7541.css.map": "/static/css/main.bb4a7541.css.map",
-    "main.d2b75864.js.map": "/static/js/main.d2b75864.js.map",
+    "main.a2963319.css.map": "/static/css/main.a2963319.css.map",
+    "main.53f51561.js.map": "/static/js/main.53f51561.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb4a7541.css",
-    "static/js/main.d2b75864.js"
+    "static/css/main.a2963319.css",
+    "static/js/main.53f51561.js"
   ]
 }
