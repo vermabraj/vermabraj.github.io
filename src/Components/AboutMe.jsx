@@ -1,4 +1,5 @@
 import Typical from 'react-typical'
+import {RxResume} from "react-icons/rx"
 import {
   Container,
   Stack,
@@ -6,6 +7,7 @@ import {
   Text,
   Button,
   Image,
+  Tooltip,
   
 } from '@chakra-ui/react';
 import Resume from "../assets/fw20_0997_Brajmohan_Verma_Resume.pdf";
@@ -16,7 +18,7 @@ import heroImage from "../assets/heroImage.png"
 export default function AboutMe() {
   return (
     <section id="aboutme">
-      <Container maxW={"90%"} >
+      <Container maxW={"90%"}>
         <div className="text-center mb-10">
           <h3 className="text-4xl font-semibold">
             ABOUT <span className="text-blue-400">ME</span>
@@ -56,28 +58,37 @@ export default function AboutMe() {
               direction={{ base: "column", sm: "row" }}
             >
               <a href="../assets/Brajmohan_Verma_Resume.pdf" download>
-                <Button
-                  variant="solid"
-                  bg="#0D74FF"
-                  color="white"
-                  _hover={{ bg: "blue.300" }}
-                  type="submit"
-                  width={{ base: "full",  }}
+                <Tooltip
+                  label="Click here to see Resume!"
+                  aria-label="A tooltip"
+                  bg="red.400"
+                  placement="top-end"
+                  hasArrow
+                  arrowSize={15}
                 >
-                  <a
-                    href={Resume}
-                    target="_blank"
-                    rel="noreferrer"
-                    download="fw20_0997_Brajmohan_Verma_Resume.pdf"
-                    onClick={() =>
-                      window.open(
-                        "https://drive.google.com/file/d/1iRX3957aRE2asiMleyLksndLZOFJUkM0/view?usp=sharing"
-                      )
-                    }
+                  <Button
+                    colorScheme="blue"
+                    variant="outline"
+                    _hover={{ bg: "blue.400",color:"white" }}
+                    type="submit"
+                    width={{ base: "full" }}
+                    rightIcon={<RxResume />}
                   >
-                    RESUME
-                  </a>
-                </Button>
+                    <a
+                      href={Resume}
+                      target="_blank"
+                      rel="noreferrer"
+                      download="fw20_0997_Brajmohan_Verma_Resume.pdf"
+                      onClick={() =>
+                        window.open(
+                          "https://drive.google.com/file/d/1iRX3957aRE2asiMleyLksndLZOFJUkM0/view?usp=sharing"
+                        )
+                      }
+                    >
+                      RESUME
+                    </a>
+                  </Button>
+                </Tooltip>
               </a>
             </Stack>
           </Stack>

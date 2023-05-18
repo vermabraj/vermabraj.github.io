@@ -16,45 +16,43 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Tooltip,
 } from "@chakra-ui/react";
+import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
+import { AiOutlineSend } from "react-icons/ai";
 import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdOutlineEmail,
-} from "react-icons/md";
-import { AiOutlineInstagram } from 'react-icons/ai';
-import { BsGithub, BsDiscord, BsPerson, BsYoutube, BsLinkedin } from "react-icons/bs";
+  BsGithub,
+  BsDiscord,
+  BsPerson,
+  BsYoutube,
+  BsLinkedin,
+} from "react-icons/bs";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-
 export default function Contact() {
+  const form = useRef();
 
-   const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-   const sendEmail = (e) => {
-     e.preventDefault();
-
-     emailjs
-       .sendForm(
-         "service_pv0dq4b",
-         "template_63wy10l",
-         form.current,
-         "_bZs8A9aMRu0g-vu5"
-       )
-       .then(
-         (result) => {
-           console.log(result.text);
-         },
-         (error) => {
-           console.log(error.text);
-
-         }
-
-       );
-       form.current.reset();
-   };
+    emailjs
+      .sendForm(
+        "service_pv0dq4b",
+        "template_63wy10l",
+        form.current,
+        "_bZs8A9aMRu0g-vu5"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    form.current.reset();
+  };
 
   return (
     <section id="contact">
@@ -83,7 +81,7 @@ export default function Contact() {
             <Box p={4}>
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                 <WrapItem>
-                  <Box >
+                  <Box>
                     <Heading>
                       Contact <span>me</span>
                     </Heading>
@@ -96,39 +94,62 @@ export default function Contact() {
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                       <VStack spacing={3} alignItems="flex-start">
-                        
+                        <Tooltip
+                          label="Contact number!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="left-end"
+                          hasArrow
+                          arrowSize={15}
+                        >
                           <Button
                             size="md"
                             height="48px"
-                            
                             variant="ghost"
                             _hover={{ border: "2px solid #1C6FEB" }}
                             leftIcon={<MdPhone color="black" size="20px" />}
                           >
                             +91 8458825546
                           </Button>
-                       
-
-                        <Button
-                          size="md"
-                          height="48px"
-                          
-                          variant="ghost"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdEmail color="black" size="20px" />}
+                        </Tooltip>
+                        <Tooltip
+                          label="Contact email address!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="left-end"
+                          hasArrow
+                          arrowSize={15}
                         >
-                          vermabraj4@gmail.com
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          
-                          variant="ghost"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdLocationOn color="black" size="20px" />}
+                          <Button
+                            size="md"
+                            height="48px"
+                            variant="ghost"
+                            _hover={{ border: "2px solid #1C6FEB" }}
+                            leftIcon={<MdEmail color="black" size="20px" />}
+                          >
+                            vermabraj4@gmail.com
+                          </Button>
+                        </Tooltip>
+                        <Tooltip
+                          label="Location!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="left-end"
+                          hasArrow
+                          arrowSize={15}
                         >
-                          Sehore, Madhya Pradesh
-                        </Button>
+                          <Button
+                            size="md"
+                            height="48px"
+                            variant="ghost"
+                            _hover={{ border: "2px solid #1C6FEB" }}
+                            leftIcon={
+                              <MdLocationOn color="black" size="20px" />
+                            }
+                          >
+                            Sehore, Madhya Pradesh
+                          </Button>
+                        </Tooltip>
                       </VStack>
                     </Box>
                     <HStack
@@ -137,8 +158,16 @@ export default function Contact() {
                       px={5}
                       alignItems="flex-start"
                     >
+                    <Tooltip
+                          label="Linkedin!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="left-end"
+                          hasArrow
+                          arrowSize={15}
+                        >
                       <div className="animate-bounce">
-                        {" "}
+                        
                         <a
                           href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
                           target="_blank"
@@ -153,6 +182,15 @@ export default function Contact() {
                           />
                         </a>
                       </div>
+                      </Tooltip>
+                      <Tooltip
+                          label="Github!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="bottom"
+                          hasArrow
+                          arrowSize={15}
+                        >
                       <div className="animate-bounce">
                         <a href="https://github.com/vermabraj" target="_blank">
                           <IconButton
@@ -165,6 +203,15 @@ export default function Contact() {
                           />
                         </a>
                       </div>
+                      </Tooltip>
+                      <Tooltip
+                          label="YouTube!"
+                          aria-label="A tooltip"
+                          bg="red.400"
+                          placement="right-end"
+                          hasArrow
+                          arrowSize={15}
+                        >
                       <div className="animate-bounce">
                         <a
                           href="https://www.youtube.com/@Brajverma"
@@ -180,6 +227,7 @@ export default function Contact() {
                           />
                         </a>
                       </div>
+                      </Tooltip>
                     </HStack>
                   </Box>
                 </WrapItem>
@@ -187,12 +235,7 @@ export default function Contact() {
                   <Box bg="white" borderRadius="lg">
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
-                        <FormControl
-                          ref={form}
-                          onSubmit={sendEmail}
-                          id="name"
-                          
-                        >
+                        <FormControl ref={form} onSubmit={sendEmail} id="name">
                           <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
@@ -240,13 +283,14 @@ export default function Contact() {
                           />
                         </FormControl>
                         <FormControl id="name" float="right">
+                        
                           <Button
-                            variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{ bg: "gray.200" }}
+                            variant="outline"
+                            colorScheme="blue"
+                            _hover={{ bg: "#42A5F5", color: "white" }}
                             type="submit"
                             value="Send"
+                            rightIcon={<AiOutlineSend/>}
                           >
                             Send Message
                           </Button>

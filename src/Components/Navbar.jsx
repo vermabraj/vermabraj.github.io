@@ -6,6 +6,7 @@ import {
   useDisclosure,
   useColorModeValue,
   useColorMode,
+  Tooltip,
 } from '@chakra-ui/react';
 import Resume from "../assets/fw20_0997_Brajmohan_Verma_Resume.pdf";
 
@@ -84,6 +85,14 @@ const Navbar = () => {
                 RESUME
               </a>
             </li>
+             <Tooltip
+                label="Change theme!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="bottom-start"
+                hasArrow
+                arrowSize={15}
+              >
             <Button
               variant="none"
               background={"none"}
@@ -91,6 +100,7 @@ const Navbar = () => {
             >
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
+            </Tooltip>
           </ul>
         </div>
 

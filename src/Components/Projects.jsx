@@ -8,6 +8,7 @@ import {
   Icon,
   SimpleGrid,
   useColorModeValue,
+  Tooltip,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { CgWebsite } from "react-icons/cg";
@@ -32,8 +33,7 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
     {
       img: Quicksell,
       name: "Quicksell(Olx-Clone)",
-      github_link:
-        "https://github.com/vermabraj/loving-train-3153/tree/main/olx-clone",
+      github_link: "https://github.com/vermabraj/Olx-clone",
       live_link: "https://olx-clone-quicksell.netlify.app/",
       disc: `Quicksell website is for buy and sell goods and products & clone os OLX, which makes it so easy to connect people to buy, sell or exchange used goods and services. It's completely free, and it can be used from a laptop or mobile phone.`,
       techStack: [
@@ -58,7 +58,7 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
     {
       img: Reliance_digital,
       name: "Digital Express (Reliance Digital)",
-      github_link: "https://github.com/vermabraj/relianceDigital_clone",
+      github_link: "https://github.com/imukeshkaushal/relianceDigital_clone",
       live_link: "https://reliance-digital-beryl.vercel.app/",
       disc: `Digital Xpress is ECommerce Website & is a clone of Reliance Digital. It is used for buying the electrical products, Home Appliances & other kind of products. Digital Express Digital Stores are bigger in size than the other Digital Xpress Mini Stores.`,
       techStack: [
@@ -89,7 +89,17 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
         <IoLogoCss3 size={"30px"} />,
         <IoLogoJavascript size={"30px"} />,
       ],
-      techStacknames: ["HTML", "CSS", "Javascript","React","Redux","Chakra-UI","Node.js","Express.js","MongoDB"]
+      techStacknames: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React",
+        "Redux",
+        "Chakra-UI",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
     },
     {
       img: chrono_meter,
@@ -175,7 +185,7 @@ function ProjectsCard(props: ProjectsCardProps) {
         <h3 className="text-2xl my-2  text-center">{name}</h3>
         <p className=" text-left">{disc}</p>
         <Flex className="mt-2">
-          <span className="  font-bold text-sm p-2 " >Tech Stack:</span>
+          <span className="  font-bold text-sm p-2 ">Tech Stack:</span>
 
           <Flex flexWrap={"wrap"}>
             {techStacknames.map((el) => (
@@ -186,27 +196,44 @@ function ProjectsCard(props: ProjectsCardProps) {
 
         <div className="flex gap-10 justify-center mb-5 mt-3">
           <Flex direction="row" className=" gap-10 justify-between">
+          <Tooltip
+                label="Click to get live demo link!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="top-start"
+                hasArrow
+                arrowSize={15}
+              >
             <Button
               onClick={() => window.open(live_link)}
               leftIcon={<CgWebsite />}
-              variant="solid"
-              bg={"#42A5F5"}
-              _hover={{ bg: "#E2E8F0" }}
+              variant="outline"
+              colorScheme="blue"
+              _hover={{ bg: "#42A5F5",color:"white" }}
               minWidth={"140px"}
             >
               Live Demo
             </Button>
-
+</Tooltip>
+<Tooltip
+                label="Click to visit Repository of website !"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="top-start"
+                hasArrow
+                arrowSize={15}
+              >
             <Button
               onClick={() => window.open(github_link)}
               leftIcon={<AiFillGithub size={"22px"} />}
-              variant="solid"
-              bg={"#42A5F5"}
-              _hover={{ bg: "#E2E8F0" }}
+              variant="outline"
+              colorScheme="blue"
+              _hover={{ bg: "#42A5F5",color:"white" }}
               minWidth={"140px"}
             >
               Visit Github
             </Button>
+            </Tooltip>
           </Flex>
         </div>
       </div>

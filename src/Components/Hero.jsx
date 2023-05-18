@@ -13,8 +13,9 @@ import {
   createIcon,
   IconProps,
   useColorModeValue,
-  HStack
-} from '@chakra-ui/react';
+  HStack,
+  Tooltip,
+} from "@chakra-ui/react";
 import { FaInstagram } from 'react-icons/fa';
 import { BsGithub, BsYoutube, BsLinkedin, BsInstagram } from "react-icons/bs";
 
@@ -108,49 +109,86 @@ export default function Hero() {
               color={"gray.500"}
               alignItems="flex-start"
             >
-              <a href="https://instagram.com/_verma_braj" target="_blank">
-                <IconButton
-                  aria-label="youtube"
-                  variant="ghost"
-                  size="lg"
-                  isRound={true}
-                  _hover={{ bg: "blue.400" }}
-                  icon={<FaInstagram size="25px" />}
-                />
-              </a>
-              <a href="https://www.youtube.com/@Brajverma" target="_blank">
-                <IconButton
-                  aria-label="youtube"
-                  variant="ghost"
-                  size="lg"
-                  isRound={true}
-                  _hover={{ bg: "blue.400" }}
-                  icon={<BsYoutube size="25px" />}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
-                target="_blank"
+              {" "}
+              <Tooltip
+                label="Instagram!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="bottom-start"
+                hasArrow
+                arrowSize={15}
               >
-                <IconButton
-                  aria-label="linkedin"
-                  variant="ghost"
-                  size="lg"
-                  isRound={true}
-                  _hover={{ bg: "blue.400" }}
-                  icon={<BsLinkedin size="23px" />}
-                />
-              </a>
-              <a href="https://github.com/vermabraj" target="_blank">
-                <IconButton
-                  aria-label="github"
-                  variant="ghost"
-                  size="lg"
-                  isRound={true}
-                  _hover={{ bg: "blue.400" }}
-                  icon={<BsGithub size="25px" />}
-                />
-              </a>
+                <a href="https://instagram.com/_verma_braj" target="_blank">
+                  <IconButton
+                    aria-label="youtube"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: "blue.400" }}
+                    icon={<FaInstagram size="25px" />}
+                  />
+                </a>
+              </Tooltip>
+              <Tooltip
+                label="Youtube!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="bottom-start"
+                hasArrow
+                arrowSize={15}
+              >
+                <a href="https://www.youtube.com/@Brajverma" target="_blank">
+                  <IconButton
+                    aria-label="youtube"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: "blue.400" }}
+                    icon={<BsYoutube size="25px" />}
+                  />
+                </a>
+              </Tooltip>
+              <Tooltip
+                label="Linkedin!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="bottom-start"
+                hasArrow
+                arrowSize={15}
+              >
+                <a
+                  href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="linkedin"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: "blue.400" }}
+                    icon={<BsLinkedin size="23px" />}
+                  />
+                </a>
+              </Tooltip>
+              <Tooltip
+                label="Github!"
+                aria-label="A tooltip"
+                bg="red.400"
+                placement="bottom-start"
+                hasArrow
+                arrowSize={15}
+              >
+                <a href="https://github.com/vermabraj" target="_blank">
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: "blue.400" }}
+                    icon={<BsGithub size="25px" />}
+                  />
+                </a>
+              </Tooltip>
             </HStack>
           </Stack>
           <Flex
