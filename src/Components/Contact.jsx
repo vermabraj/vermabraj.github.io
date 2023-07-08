@@ -158,75 +158,77 @@ export default function Contact() {
                       px={5}
                       alignItems="flex-start"
                     >
-                    <Tooltip
-                          label="Linkedin!"
-                          aria-label="A tooltip"
-                          bg="red.400"
-                          placement="left-end"
-                          hasArrow
-                          arrowSize={15}
-                        >
-                      <div className="animate-bounce">
-                        
-                        <a
-                          href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
-                          target="_blank"
-                        >
-                          <IconButton
-                            aria-label="facebook"
-                            variant="ghost"
-                            size="lg"
-                            isRound={true}
-                            _hover={{ bg: "#0D74FF" }}
-                            icon={<BsLinkedin size="28px" />}
-                          />
-                        </a>
-                      </div>
+                      <Tooltip
+                        label="Linkedin!"
+                        aria-label="A tooltip"
+                        bg="red.400"
+                        placement="left-end"
+                        hasArrow
+                        arrowSize={15}
+                      >
+                        <div className="animate-bounce">
+                          <a
+                            href="https://www.linkedin.com/in/brajmohan-verma-6248b1191/"
+                            target="_blank"
+                          >
+                            <IconButton
+                              aria-label="facebook"
+                              variant="ghost"
+                              size="lg"
+                              isRound={true}
+                              _hover={{ bg: "#0D74FF" }}
+                              icon={<BsLinkedin size="28px" />}
+                            />
+                          </a>
+                        </div>
                       </Tooltip>
                       <Tooltip
-                          label="Github!"
-                          aria-label="A tooltip"
-                          bg="red.400"
-                          placement="bottom"
-                          hasArrow
-                          arrowSize={15}
-                        >
-                      <div className="animate-bounce">
-                        <a href="https://github.com/vermabraj" target="_blank">
-                          <IconButton
-                            aria-label="github"
-                            variant="ghost"
-                            size="lg"
-                            isRound={true}
-                            _hover={{ bg: "#0D74FF" }}
-                            icon={<BsGithub size="28px" />}
-                          />
-                        </a>
-                      </div>
+                        label="Github!"
+                        aria-label="A tooltip"
+                        bg="red.400"
+                        placement="bottom"
+                        hasArrow
+                        arrowSize={15}
+                      >
+                        <div className="animate-bounce">
+                          <a
+                            href="https://github.com/vermabraj"
+                            target="_blank"
+                          >
+                            <IconButton
+                              aria-label="github"
+                              variant="ghost"
+                              size="lg"
+                              isRound={true}
+                              _hover={{ bg: "#0D74FF" }}
+                              icon={<BsGithub size="28px" />}
+                            />
+                          </a>
+                        </div>
                       </Tooltip>
                       <Tooltip
-                          label="YouTube!"
-                          aria-label="A tooltip"
-                          bg="red.400"
-                          placement="right-end"
-                          hasArrow
-                          arrowSize={15}
-                        >
-                      <div className="animate-bounce">
-                        <a
-                          href="https://www.youtube.com/@Brajverma"
-                          target="_blank"
-                        >
-                          <IconButton
-                            aria-label="discord"
-                            variant="ghost"
-                            size="lg"
-                            isRound={true}
-                            _hover={{ bg: "#0D74FF" }}
-                            icon={<BsYoutube size="28px" />}
-                          />
-                        </a>
-                      </div>
+                        label="YouTube!"
+                        aria-label="A tooltip"
+                        bg="red.400"
+                        placement="right-end"
+                        hasArrow
+                        arrowSize={15}
+                      >
+                        <div className="animate-bounce">
+                          <a
+                            href="https://www.youtube.com/@Brajverma"
+                            target="_blank"
+                          >
+                            <IconButton
+                              aria-label="discord"
+                              variant="ghost"
+                              size="lg"
+                              isRound={true}
+                              _hover={{ bg: "#0D74FF" }}
+                              icon={<BsYoutube size="28px" />}
+                            />
+                          </a>
+                        </div>
                       </Tooltip>
                     </HStack>
                   </Box>
@@ -283,14 +285,13 @@ export default function Contact() {
                           />
                         </FormControl>
                         <FormControl id="name" float="right">
-                        
                           <Button
                             variant="outline"
                             colorScheme="blue"
                             _hover={{ bg: "#42A5F5", color: "white" }}
                             type="submit"
                             value="Send"
-                            rightIcon={<AiOutlineSend/>}
+                            rightIcon={<AiOutlineSend />}
                           >
                             Send Message
                           </Button>
