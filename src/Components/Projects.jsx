@@ -64,7 +64,7 @@ import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
       index: 2,
       img: Reliance_digital,
       name: "Digital Express (Reliance Digital)",
-      github_link: "https://github.com/imukeshkaushal/relianceDigital_clone",
+      github_link: "https://github.com/vermabraj/relianceDigital_clone",
       live_link: "https://reliance-digital-beryl.vercel.app/",
       disc: `Digital Xpress is ECommerce Website & is a clone of Reliance Digital. It is used for buying the electrical products, Home Appliances & other kind of products. Digital Express Digital Stores are bigger in size than the other Digital Xpress Mini Stores.`,
       techStack: [
