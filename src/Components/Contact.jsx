@@ -127,7 +127,7 @@ export default function Contact() {
                             _hover={{ border: "2px solid #1C6FEB" }}
                             leftIcon={<MdEmail color="black" size="20px" />}
                           >
-                            brajvermabusiness@gmail.com
+                            brajverma1245@gmail.com  
                           </Button>
                         </Tooltip>
                         <Tooltip
