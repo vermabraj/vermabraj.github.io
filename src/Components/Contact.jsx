@@ -109,7 +109,7 @@ export default function Contact() {
                             _hover={{ border: "2px solid #1C6FEB" }}
                             leftIcon={<MdPhone color="black" size="20px" />}
                           >
-                            +91 8458825546
+                            +91 8468800000
                           </Button>
                         </Tooltip>
                         <Tooltip
@@ -127,7 +127,7 @@ export default function Contact() {
                             _hover={{ border: "2px solid #1C6FEB" }}
                             leftIcon={<MdEmail color="black" size="20px" />}
                           >
-                            vermabraj4@gmail.com
+                            brajvermabusiness@gmail.com
                           </Button>
                         </Tooltip>
                         <Tooltip
