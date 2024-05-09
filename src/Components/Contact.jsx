@@ -109,7 +109,7 @@ export default function Contact() {
                             _hover={{ border: "2px solid #1C6FEB" }}
                             leftIcon={<MdPhone color="black" size="20px" />}
                           >
-                            +91 8468800000
+                            +91 8458825546
                           </Button>
                         </Tooltip>
                         <Tooltip
